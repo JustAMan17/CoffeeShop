@@ -1,79 +1,101 @@
-body{
+
+/* Global body styling */
+body {
     background-color: rgb(61, 35, 1);
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
 }
+
 section {
     background-color: #b8681d;
-    background-image: linear-gradient(rgb(157, 83, 3) ,rgb(47, 24, 2));
+    background-image: linear-gradient(rgb(157, 83, 3), rgb(47, 24, 2));
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
     display: flex;
+    flex-wrap: wrap; /* Allow items to wrap for small screens */
     justify-content: space-between;
+    align-items: center;
 }
-.page{
-    width: 50%; /* Adjust width as needed */
-    height: 1000px;
-    margin: 5px; 
-    text-align: center; 
+
+.page {
+    width: 48%; /* Adjust width for flexibility */
+    height: auto;
+    margin: 5px 0;
+    text-align: center;
     border: 1px solid #ddd;
     padding: 15px;
     border-radius: 5px;
     background-image: url('weee.png');
-    background-size: 100% 100%;
+    background-size: cover; /* Ensure the background adjusts */
     background-repeat: no-repeat;
 }
-.logo h1{
+
+.logo h1 {
     margin-top: 70px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 72px;
 }
-.coffs{
+
+.coffs {
     text-align: start;
     margin-left: 50px;
 }
-section .page .size{
+
+section .page .size {
     display: flex;
     justify-content: start;
     margin-left: 70px;
     margin-top: 5px;
 }
-.pr{
+
+.pr {
     margin-left: 250px;
 }
-.iz{
+
+.iz {
     margin-left: 240px;
 }
-.ze{
+
+.ze {
     margin-left: 260px;
 }
-.coffee{
+
+.coffee {
     justify-items: baseline;
     margin-left: 50px;
 }
-.coffee .coff{
+
+.coffee .coff {
     margin-left: 40px;
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
 }
 
-img{
+img {
     width: 110px;
     margin-left: 200px;
 }
-.page h1{
+
+.page h1 {
     margin-top: 70px;
 }
-.good{
+
+.good {
     width: 100%;
     margin-left: 0px;
     margin-top: 0px;
 }
-h1,h2,h5,h3,p{
+
+/* General text color */
+h1, h2, h5, h3, p {
     color: #be9076;
 }
+
+/* Nav styling */
 nav {
     position: fixed;
     top: 0;
@@ -82,55 +104,133 @@ nav {
     background-color: white;
     z-index: 999;
     padding: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-  body {
-    margin-top: 80px;
-  }
-  ul {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    margin-top: 80px; /* Adjust for nav height */
+}
+
+ul {
     list-style: none;
     padding: 0;
     margin: 0;
-  }
-  .sidebar {
-    display: none; 
+}
+
+/* Sidebar styling */
+.sidebar {
+    display: none; /* Initially hidden */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 50px; 
-    background-color: #dfab88; 
+    height: 50px;
+    background-color: #dfab88;
     z-index: 1000;
-    padding: 10px 0; 
-  } 
-  .sidebar.active {
+    padding: 10px 0;
+}
+
+.sidebar.active {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
-  }
-  .sidebar li {
-    display: inline-block; 
-    margin-right: 20px; 
-  } 
- .sidebar li a {
-    text-decoration: none;
-    color: black;
-    padding: 80px;
-  }
-  .sidebar li a:hover {
-    color: #555;
-  } 
-  nav ul li {
+}
+
+/* Horizontal layout for sidebar items */
+.sidebar li {
     display: inline-block;
     margin-right: 20px;
-  } 
-  nav ul li a {
+}
+
+.sidebar li a {
     text-decoration: none;
     color: black;
-    padding: 80px;
-  }
-  
-  nav ul li a:hover {
+    padding: 10px;
+}
+
+.sidebar li a:hover {
     color: #555;
-  }
-  
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    color: #555;
+}
+
+/* Responsive Media Queries */
+
+/* Mobile (up to 600px) */
+@media (max-width: 600px) {
+    section {
+        flex-direction: column; /* Stack items vertically */
+        padding: 10px;
+    }
+
+    .page {
+        width: 100%; /* Full width on mobile */
+        margin: 10px 0;
+    }
+
+    .logo h1 {
+        font-size: 48px; /* Smaller font for mobile */
+    }
+
+    img {
+        width: 80px; /* Adjust image size */
+        margin-left: 0;
+    }
+
+    .pr, .iz, .ze {
+        margin-left: 0; /* Remove fixed margin on small screens */
+    }
+
+    .coffee .coff {
+        margin-left: 0;
+        flex-direction: column; /* Stack coffee options vertically */
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 5px;
+    }
+
+    .sidebar li a {
+        padding: 5px;
+    }
+}
+
+/* Tablet (600px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    section {
+        flex-direction: column; /* Stack on tablets too */
+        align-items: center;
+    }
+
+    .page {
+        width: 90%; /* Slightly smaller than full width on tablets */
+    }
+
+    .coffee .coff {
+        flex-direction: column; /* Stack vertically */
+        align-items: center;
+    }
+
+    img {
+        width: 90px; /* Slightly smaller images */
+    }
+
+    .pr, .iz, .ze {
+        margin-left: 0;
+        text-align: center;
+    }
+}
