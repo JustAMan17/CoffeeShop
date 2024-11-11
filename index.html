@@ -5,127 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Espresso Lounge</title>
     <link rel="stylesheet" href="css2.css">
-    <style>
-      /* Mobile-optimized CSS */
-      @media only screen and (max-width: 768px) {
-          /* General body styling */
-          body {
-              background-color: rgb(61, 35, 1);
-              margin-top: 60px;
-          }
-
-          /* Section styling */
-          section {
-              background-color: #b8681d;
-              background-image: linear-gradient(rgb(157, 83, 3), rgb(47, 24, 2));
-              padding: 15px;
-              margin-bottom: 15px;
-              border-radius: 5px;
-              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-              text-align: center;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-          }
-
-          /* Page container */
-          .page {
-              width: 90%; /* Adjust width to fit mobile screen */
-              height: auto;
-              margin: 10px auto; 
-              text-align: center; 
-              border: 1px solid #ddd;
-              padding: 10px;
-              border-radius: 5px;
-              background-image: url('weee.png');
-              background-size: cover;
-              background-repeat: no-repeat;
-          }
-
-          /* Logo and title */
-          .logo h1 {
-              margin-top: 40px;
-              font-size: 36px; /* Adjust font size for mobile */
-          }
-
-          /* Coffee sections */
-          .coffs, .size, .pr, .iz, .ze, .coffee, .coffee .coff {
-              margin: 5px auto;
-              text-align: center;
-              display: block;
-          }
-
-          img {
-              width: 80px;
-              margin: 0 auto;
-          }
-
-          .good {
-              width: 100%;
-              margin: 0 auto;
-              margin-top: 0px;
-          }
-
-          h1, h2, h3, h5, p {
-              color: #be9076;
-              font-size: 16px; /* Adjust font size for better readability on mobile */
-          }
-
-          /* Navigation bar */
-          nav {
-              position: fixed;
-              top: 0;
-              left: 0;
-              width: 100%;
-              background-color: white;
-              z-index: 999;
-              padding: 10px;
-              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-          }
-
-          ul {
-              list-style: none;
-              padding: 0;
-              margin: 0;
-          }
-
-          /* Sidebar menu for mobile */
-          .sidebar {
-              display: none;
-              position: fixed;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 50px;
-              background-color: #dfab88;
-              z-index: 1000;
-              padding: 10px 0;
-          }
-
-          .sidebar.active {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-          }
-
-          .sidebar li {
-              display: inline-block;
-              margin-right: 10px;
-          }
-
-          /* Navigation links */
-          .sidebar li a, nav ul li a {
-              text-decoration: none;
-              color: black;
-              font-size: 14px;
-              padding: 10px;
-          }
-
-          .sidebar li a:hover, nav ul li a:hover {
-              color: #555;
-          }
-      }
-    </style>
   </head>
   <body>
     <nav>
@@ -142,68 +21,72 @@
         <li onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
       </ul>
     </nav>
-    <section class="menu">
-      <div class="page">
-        <div class="logo">
-          <h1>Coffee shop</h1>
-          <p>__________________________________________________________________</p>
-          <h2>PRICES</h2>
-        </div> 
-        <div class="coffs"> 
-          <h3>COFFEE</h3>
-        </div> 
-        <div class="size">
-          <h5>SMALL</h5>
-          <h5 class="pr">29 pesos</h5>
-        </div>
-        <div class="size">
-          <h5>MEDIUM</h5>
-          <h5 class="iz">29 pesos</h5>
-        </div>
-        <div class="size">
-          <h5>TALL  </h5>
-          <h5 class="ze">29 pesos</h5>
-        </div>
+   <section class="menu">
+    <div class="page">
+      <div class="logo">
+        <h1>Coffee shop</h1>
+        <p>__________________________________________________________________</p>
+        <h2>PRICES</h2>
+      </div> 
+      <div class="coffs"> 
+        <h3>COFFEE</h3>
+    </div> 
+    <div class="size">
+        <h5>SMALL</h5>
+        <h5 class="pr">29 pesos</h5>
+    </div>
+    <div class="size">
+        <h5>MEDIUM</h5>
+        <h5 class="iz">29 pesos</h5>
+    </div>
+    <div class="size">
+        <h5>TALL  </h5>
+        <h5 class="ze">29 pesos</h5>
+    </div>
         <img class="good" src="sda.png" alt="ddd">
-      </div>
-      <div class="page">
+    </div>
+    <div class="page">
         <div>
-          <h1>MENU</h1>
+           <h1>MENU</h1>
         </div>
         <div class="coffee"> 
-          <h2>COFFEE</h2>
-          <div class="coff"> 
-            <h3>*LATTE*</h3>
-            <img src="lattte.png" alt="caps">
-          </div> 
-          <div class="coff"> 
-            <h3>*CAPPUCCINO*</h3>
-            <img src="cappus.png" alt="caps">
-          </div>
-          <div class="coff"> 
-            <h3>*ESPRESSO*</h3>
-            <img src="espreso.png" alt="caps">
-          </div> 
-          <div class="coff"> 
-            <h3>*ICE COFFEE*</h3>
-            <img src="sss.png" alt="caps">
-          </div>
-        </div>
-        <div class="contact">
-          <p>__________________________________________________________________</p>
-        </div>
-      </div>
-    </section>  
-    <script>
-      function showSidebar() {
-          const sidebar = document.querySelector('.sidebar');
-          sidebar.style.display = 'flex';
-      }
+            <h2>COFFEE</h2>
 
-      function hideSidebar() {
-          const sidebar = document.querySelector('.sidebar');
-          sidebar.style.display = 'none';
-      }
-    </script>
-  </body>
+            <div class="coff"> 
+                <h3>*LATTE*</h3>
+                <img src="lattte.png" alt="caps">
+            </div> 
+            <div class="coff"> 
+                <h3>*CAPPUCCINO*</h3>
+                <img src="cappus.png" alt="caps">
+            </div>
+            <div class="coff"> 
+                <h3>*ESPRESSO*</h3>
+                <img src="espreso.png" alt="caps">
+            </div> 
+            <div class="coff"> 
+                <h3>*ICE COFFEE*</h3>
+                <img src="sss.png" alt="caps">
+                
+        </div>
+       
+        </div>
+
+        <div class="contact">
+            <p>__________________________________________________________________</p>
+        </div>
+    </div>
+   </section>  
+   <script>
+    function showSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'flex';
+    }
+
+    function hideSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'none';
+    }
+</script>
+ </body>
 </html>
