@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Espresso Lounge</title>
-    <link rel="stylesheet" href="css2.css">
+    <link rel="stylesheet" href="css.css">
   </head>
   <body>
     <nav>
@@ -78,6 +78,12 @@
     </div>
    </section>  
    <script>
+ if (window.matchMedia("(max-width: 600px)").matches) {
+          console.log("Mobile screen is active (width less than 600px)");
+      } else {
+          console.log("Mobile screen is NOT active");
+      }
+
     function showSidebar() {
         const sidebar = document.querySelector('.sidebar');
         sidebar.style.display = 'flex';
